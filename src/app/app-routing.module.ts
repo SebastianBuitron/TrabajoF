@@ -8,8 +8,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'tasklist',
     pathMatch: 'full'
+  },
+  {
+    path: 'tasklist',
+    loadChildren: () => import('./pages/tasklist/tasklist.module').then( m => m.TasklistPageModule)
   },
 ];
 
